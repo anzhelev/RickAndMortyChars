@@ -1,0 +1,12 @@
+
+
+/* Class = "UIViewController"; title = "CharListViewController"; ObjectID = "BYZ-38-t0r"; */
+"BYZ-38-t0r.title" = "CharListViewController";
+
+"characterInfo.name" = "Имя";
+"characterInfo.gender" = "Пол";
+"characterInfo.type" = "Тип";
+"characterInfo.originName" = "Происхождение";
+"characterInfo.locationName" = "Локация";
+"characterInfo.species" = "Вид";
+"characterInfo.status" = "Статус";
