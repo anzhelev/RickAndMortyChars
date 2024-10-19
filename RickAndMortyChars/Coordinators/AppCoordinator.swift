@@ -4,7 +4,6 @@
 //
 //  Created by Andrey Zhelev on 16.10.2024.
 //
-
 import UIKit
 
 class AppCoordinator: Coordinator {
@@ -23,6 +22,7 @@ class AppCoordinator: Coordinator {
         let vc = CharListViewController.createObject()
         vc.coordinator = self
         vc.viewModel = CharListViewModel()
+        navigationController.isNavigationBarHidden = true
         navigationController.pushViewController(vc, animated: true)
     }
     
@@ -30,10 +30,7 @@ class AppCoordinator: Coordinator {
         let vc = CharDetailsViewController.createObject()
         vc.coordinator = self
         vc.viewModel = CharDetailsViewModel(character: character)
+        navigationController.isNavigationBarHidden = false
         navigationController.pushViewController(vc, animated: true)
-    }
-    
-    func dismissViewController(vc: UIViewController) {
-        vc.dismiss(animated: true)
     }
 }

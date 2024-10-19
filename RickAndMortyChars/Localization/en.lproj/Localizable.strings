@@ -5,7 +5,6 @@
   Created by Andrey Zhelev on 19.10.2024.
   
 */
-
 "characterInfo.name" = "Name:";
 "characterInfo.gender" = "Gender:";
 "characterInfo.type" = "Type:";

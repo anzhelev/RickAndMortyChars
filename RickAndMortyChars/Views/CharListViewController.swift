@@ -30,6 +30,8 @@ class CharListViewController: UIViewController, AssemblerProtocol {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        
+        navigationController?.isNavigationBarHidden = true
         viewModel?.viewWillAppear()
     }
     
@@ -45,20 +47,18 @@ class CharListViewController: UIViewController, AssemblerProtocol {
     func updateTable(with indexes: [IndexPath]) {
         charsTable.insertRows(at: indexes, with: .automatic)
     }
-        
+    
     // MARK: - Private Methods
     private func bindViewModel() {
         viewModel?.showIndicator.bind { [weak self] showIndicator in
             guard let self, let showIndicator else {
                 return
             }
-            DispatchQueue.main.async {
-                if showIndicator {
-                    self.showLoading()
-                } else {
-                    self.hideLoading()
-                }
-            }
+            if showIndicator {
+                self.showLoading()
+            } else {
+                self.hideLoading()
+            }            
         }
         
         viewModel?.newRowsAdded.bind { [weak self] newRowsAdded in
@@ -77,8 +77,16 @@ class CharListViewController: UIViewController, AssemblerProtocol {
     }
     
     private func configView() {
+        setNavBarButtons()
         setupActivityIndicator()
         setupCharsTable()
+    }
+    
+    private func setNavBarButtons() {
+        let backItem = UIBarButtonItem()
+        backItem.title = nil
+        backItem.tintColor = .primaryTextColor
+        navigationItem.backBarButtonItem = backItem
     }
     
     private func setupActivityIndicator() {

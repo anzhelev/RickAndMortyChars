@@ -33,6 +33,7 @@ class CharDetailsViewController: UIViewController, AssemblerProtocol {
         table.translatesAutoresizingMaskIntoConstraints = false
         return table
     }()
+    
     private let charDetailsTableRowHeight = 45.0
     
     // MARK: - Lifecycle
@@ -97,7 +98,7 @@ class CharDetailsViewController: UIViewController, AssemblerProtocol {
         
         charAvatar.kf.setImage(
             with: url,
-            placeholder: UIImage(systemName: "person.fill")?.withTintColor(.avatarStubTintColor)
+            placeholder: UIImage(systemName: "person.fill")
         )
         print (url)
     }

@@ -4,7 +4,6 @@
 //
 //  Created by Andrey Zhelev on 19.10.2024.
 //
-
 struct Character {
     let name: String
     let status: String

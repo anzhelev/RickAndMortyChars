@@ -4,7 +4,6 @@
 //
 //  Created by Andrey Zhelev on 16.10.2024.
 //
-
 import UIKit
 
 extension UIColor {
@@ -40,7 +39,6 @@ extension UIColor {
     private static let lightThemeTextSecondary = UIColor.darkGray
     private static let darkThemeTextSecondary = UIColor.lightGray
     
-    static let avatarStubTintColor = UIColor(hexString: "#FEEF0D")
     static let cellBackground = UIColor.lightGray.withAlphaComponent(0.2)
     
     static let backgroundColor = UIColor { traits in
