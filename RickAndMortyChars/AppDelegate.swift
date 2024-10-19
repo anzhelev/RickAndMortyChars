@@ -4,7 +4,6 @@
 //
 //  Created by Andrey Zhelev on 16.10.2024.
 //
-
 import UIKit
 
 @main
@@ -24,4 +23,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 }
-
