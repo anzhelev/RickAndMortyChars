@@ -29,8 +29,7 @@ class AppCoordinator: Coordinator {
     func showCharDetails(for character: Character) {
         let vc = CharDetailsViewController.createObject()
         vc.coordinator = self
-        vc.viewModel = CharDetailsViewModel()
-        vc.viewModel?.character = character
+        vc.viewModel = CharDetailsViewModel(character: character)
         navigationController.pushViewController(vc, animated: true)
     }
     

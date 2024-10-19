@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  RickAndMortyChars
+
+  Created by Andrey Zhelev on 19.10.2024.
+  
+*/
+"characterInfo.name" = "Имя:";
+"characterInfo.gender" = "Пол:";
+"characterInfo.type" = "Тип:";
+"characterInfo.originName" = "Происхождение:";
+"characterInfo.locationName" = "Локация:";
+"characterInfo.species" = "Вид:";
+"characterInfo.status" = "Статус:";

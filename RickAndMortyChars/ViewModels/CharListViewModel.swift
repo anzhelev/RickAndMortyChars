@@ -11,6 +11,7 @@ class CharListViewModel {
     // MARK: - Puplic Properties
     var showIndicator: Observable<Bool> = Observable(false)
     var newRowsAdded: Observable<[IndexPath]> = Observable(nil)
+    var characterSelected: Observable<Character> = Observable(nil)
     
     // MARK: - Private Properties
     private let networkClient = NetworkClient.networkClient
@@ -51,6 +52,7 @@ class CharListViewModel {
     }
     
     func charIsSelected (row: Int) {
+        characterSelected.value = characters[row]
     }
     
     // MARK: - Public Methods

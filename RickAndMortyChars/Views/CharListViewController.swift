@@ -34,8 +34,6 @@ class CharListViewController: UIViewController, AssemblerProtocol {
     }
     
     // MARK: - Public Methods
-    
-    
     func showLoading() {
         activityIndicator.startAnimating()
     }
@@ -47,11 +45,10 @@ class CharListViewController: UIViewController, AssemblerProtocol {
     func updateTable(with indexes: [IndexPath]) {
         charsTable.insertRows(at: indexes, with: .automatic)
     }
-    
-    
+        
     // MARK: - Private Methods
     private func bindViewModel() {
-        viewModel?.showIndicator.bind{ [weak self] showIndicator in
+        viewModel?.showIndicator.bind { [weak self] showIndicator in
             guard let self, let showIndicator else {
                 return
             }
@@ -64,16 +61,22 @@ class CharListViewController: UIViewController, AssemblerProtocol {
             }
         }
         
-        viewModel?.newRowsAdded.bind{ [weak self] newRowsAdded in
+        viewModel?.newRowsAdded.bind { [weak self] newRowsAdded in
             guard let self, let newRowsAdded else {
                 return
             }
             self.updateTable(with: newRowsAdded)
         }
+        
+        viewModel?.characterSelected.bind{ [weak self] char in
+            guard let self, let char else {
+                return
+            }
+            self.coordinator?.showCharDetails(for: char)
+        }
     }
     
     private func configView() {
-        
         setupActivityIndicator()
         setupCharsTable()
     }

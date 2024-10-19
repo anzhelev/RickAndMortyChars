@@ -11,14 +11,3 @@ struct CharactersData {
     let nextPage: String?
     let characters: [Character]
 }
-
-struct Character {
-    let name: String
-    let status: String
-    let species: String
-    let type: String
-    let gender: String
-    let originName: String
-    let locationName: String
-    let image: String
-}
