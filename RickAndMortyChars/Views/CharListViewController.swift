@@ -83,6 +83,7 @@ class CharListViewController: UIViewController, AssemblerProtocol {
     }
     
     private func setNavBarButtons() {
+        navigationController?.isNavigationBarHidden = true
         let backItem = UIBarButtonItem()
         backItem.title = nil
         backItem.tintColor = .primaryTextColor

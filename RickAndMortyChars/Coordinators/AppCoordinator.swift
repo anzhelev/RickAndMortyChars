@@ -22,7 +22,6 @@ class AppCoordinator: Coordinator {
         let vc = CharListViewController.createObject()
         vc.coordinator = self
         vc.viewModel = CharListViewModel()
-        navigationController.isNavigationBarHidden = true
         navigationController.pushViewController(vc, animated: true)
     }
     
@@ -30,7 +29,6 @@ class AppCoordinator: Coordinator {
         let vc = CharDetailsViewController.createObject()
         vc.coordinator = self
         vc.viewModel = CharDetailsViewModel(character: character)
-        navigationController.isNavigationBarHidden = false
         navigationController.pushViewController(vc, animated: true)
     }
 }

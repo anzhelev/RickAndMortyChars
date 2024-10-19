@@ -45,6 +45,12 @@ class CharDetailsViewController: UIViewController, AssemblerProtocol {
         viewModel?.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        navigationController?.isNavigationBarHidden = false
+    }
+    
     // MARK: - Public Methods
     func bindViewModel() {
         viewModel?.setValues.bind { [weak self] setValues in
